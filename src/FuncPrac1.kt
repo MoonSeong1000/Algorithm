@@ -47,6 +47,20 @@ val userList: List<User> = listOf(
         )
 );
 
+// <---------Functinal---------> //
+fun main() {
+    var familyList : List<User> = userList.flatMap{ it.family }
+    var answer = familyList
+            .filter{user->user.age>=20}
+            .sortedByDescending { it.age }
+            .take(4)
+            .flatMap { it-> listOf(it.age) }
+            .reduce { total,age->total+age }
+    println(answer)
+}
+
+// <---------Procedural---------> //
+/*
 fun main() {
     var ageList : ArrayList<Int> = ArrayList<Int>()
 
@@ -65,3 +79,4 @@ fun main() {
     }
     println(ageList)
 }
+*/
