@@ -64,6 +64,4 @@ fun main() {
         answer += ageList[it]
     }
     println(ageList)
-    println(ageList)
-
 }
