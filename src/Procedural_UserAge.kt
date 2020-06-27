@@ -63,6 +63,7 @@ fun main() {
     repeat(4) {
         answer += ageList[it]
     }
-
     println(ageList)
+    println(ageList)
+
 }
